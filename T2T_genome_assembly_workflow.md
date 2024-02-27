@@ -1,4 +1,4 @@
-# Analysis of pacbio hifi (high fidelity) data from sequel ll system
+# Hybrid genome assembly combining PacBio-HiFi and Oxford Nanopore reads with Hifiasm 
 
 1. Hifi data in circular consensu sequence (CCS) format recieved from sequencer
 
