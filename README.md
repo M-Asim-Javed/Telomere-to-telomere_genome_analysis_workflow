@@ -1,1 +1,1 @@
-# Telomere to telomere genome assembly of Plasmodiophora brassicae
+# Telomere to telomere genome assembly of *Plasmodiophora brassicae*
