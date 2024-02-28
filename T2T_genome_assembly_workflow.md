@@ -8,7 +8,7 @@
 # bam2fastq package
 # firstly index and convert CCS.bam to pbi format to .fastq
 
-pbindex pbhifi_merged.ccs.bam
+pbindex pbhifi_smrt1.ccs.bam
 bam2fastq -o out in_1.bam in_2.bam in_4.bam
 ```
 3. Quality control of Oxford Nanopore reads 
