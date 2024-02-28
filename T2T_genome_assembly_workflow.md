@@ -32,4 +32,30 @@ hifiasm -l0 --hg-size 25.5m -u 0 -o pb3A.asm -t32 --ul ont_3kb_reads.fastq.gz --
 
 awk '/^S/{print ">"$2;print $3}' test.p_ctg.gfa > test.p_ctg.fa
 ```
-5. 
+
+5. Polishing of final genome assembly
+```
+# Quality control  using FastQC 
+
+fastqc -t 10 pb3A_forward_paired.fastq.gz pb3A_reverse_paired.fastq.gz  -o /pb3A_qc
+
+# Removal of adapters using Trimmomatic
+
+java -jar /prg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 10 pb3A_forward_R1_paired.fastq.gz pb3A_reverse_R2_paired.fastq.gz pb3A_forward_paired.fastq.gz pb3A_forward_unpaired.fastq.gz pb3A_reverse_paired.fastq.gz pb3A_reverse_unpaired.fastq.gz ILLUMINACLIP:/adapters/adapters.fa MINLEN:50 
+
+# Hapo_G polishing with Illumina short reads
+
+module load bwa/0.7.13 htslib/1.8 samtools/1.13 python/3.7 hapog/1.2
+/prg/hapog/1.2/hapog.py --genome hybrid_assembly_hifiasm.fa --pe1 pb3A_forward_paired.fastq.gz --pe2 pb3A_reverse_paired.fastq.gz -o hapoG -t 10 -u
+```
+6. Post assembly analysis
+
+```
+# Checking the quality of assembly
+
+quast.py pb3A_T_T_assembly.fa reference_genome.fa -o quast_assembly_report
+
+# Compleasm_genome completeness/BUSCO
+
+python /home/edelab/miniconda3/pkgs/compleasm-0.2.5-pyh7cba7a3_0/site-packages/compleasm.py run -a pb3A_T_T_assembly.fasta -o output_t2t_assembly -t 30 -l eukaryota  
+```
