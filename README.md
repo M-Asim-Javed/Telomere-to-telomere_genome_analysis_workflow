@@ -4,3 +4,5 @@ Bioinformatics workflow and script for the telomere to telomere genomic analysis
 
 
 01.  [Detailed T2T genome analysis workflow](https://github.com/M-Asim-Javed/T2T_bioinformatics_workflow/blob/main/T2T_genome_assembly_workflow.md)
+
+2. [ChromoMap_R based Ideogram script](https://github.com/M-Asim-Javed/T2T_bioinformatics_workflow/blob/main/R_Ideogram.md)
