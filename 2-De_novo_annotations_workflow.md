@@ -16,7 +16,7 @@
 2. **De novo annotations using BRAKER3**
 
 ```
-singularity exec braker3.sif braker.pl --genome=genome_masked.fa --species=pb \
+singularity exec braker3.sif braker.pl --genome=genome_masked.fa --species=pb 
 
      --prot_seq=proteins.fa  --rnaseq_sets_ids=S001A93_ID1,S001E7A_ID2,21dpi_ID3,7dpi_ID4 \
 
