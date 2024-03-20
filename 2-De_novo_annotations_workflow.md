@@ -1,6 +1,6 @@
-# De novo annotations using BRAKER3 pipeline
+# De novo annotations of _P_. _brassicae_ genome assembly using BRAKER3 pipeline
 
-1. Repeat content prediction and soft-masking of _P_. _brassicae_ genome assembly
+1. **Repeat content prediction and soft-masking** 
 ```
 # Repeat content prediction by RepeatModeller
 
@@ -13,7 +13,7 @@
 
 ```
 
-2. De novo annotations using BRAKER3
+2. **De novo annotations using BRAKER3**
 
 ```
 singularity exec braker3.sif braker.pl --genome=genome_masked.fa --species=pb \
@@ -22,7 +22,7 @@ singularity exec braker3.sif braker.pl --genome=genome_masked.fa --species=pb \
 
         --rnaseq_sets_dirs=./rnaseq  --threads 20 --busco_lineage eukaryota_odb10 &> pb3a.log
 ```
-Paramters Note:
+**Paramters Note:**
 
  1. ```--genome=genome_masked.fa``` stands for the repeat contents masked fasta file of final genome assembly
 
