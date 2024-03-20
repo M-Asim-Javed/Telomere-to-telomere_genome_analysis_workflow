@@ -26,12 +26,14 @@ gunzip -c pbhifi_merged.fastq.gz | chopper -l 3000 | gzip > filtered_3kb_pbhifi_
 
 4. Hybrid genome assebly using Hifiasm
 ```
-hifiasm -l0 --hg-size 25.5m -u 0 -o pb3A.asm -t32 --ul ont_3kb_reads.fastq.gz --hom-cov auto pb3A_hifi.fastq.gz  # l0 = to haploid input
+hifiasm -l0 --hg-size 25.5m -u 0 -o pb3A.asm -t32 --ul ont_3kb_reads.fastq.gz --hom-cov auto pb3A_hifi.fastq.gz  
 
 # The FASTA file can be produced from GFA as follows:
 
 awk '/^S/{print ">"$2;print $3}' test.p_ctg.gfa > test.p_ctg.fa
 ```
+Note:  ```-l0```  stands to haploid/inbred genome flag
+
 
 5. Polishing of final genome assembly
 ```
