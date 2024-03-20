@@ -1,8 +1,8 @@
 # Hybrid genome assembly combining PacBio-HiFi and Oxford Nanopore reads using Hifiasm 
 
-1. Hifi data in circular consensu sequence (CCS) format recieved from sequencer
+**1. Hifi data in circular consensu sequence (CCS) format recieved from sequencer**
 
-2. Convert CCS file into fastq (.fq) format using pacbio toolkit (pbtk) through CCS.bam to fastq package [link](https://github.com/PacificBiosciences/pbtk)
+**2.** **Convert CCS file into fastq (.fq) format using pacbio toolkit (pbtk) through CCS.bam to fastq package** [link](https://github.com/PacificBiosciences/pbtk)
 
 ```
 # bam2fastq package
@@ -11,7 +11,7 @@
 pbindex pbhifi_smrt1.ccs.bam
 bam2fastq -o out in_1.bam in_2.bam in_4.bam
 ```
-3. Quality control of Oxford Nanopore reads 
+**3. Quality control of Oxford Nanopore reads**
 
 ```
 # merge all basecalled ONT fastq files
@@ -24,7 +24,7 @@ merge fastq
 gunzip -c pbhifi_merged.fastq.gz | chopper -l 3000 | gzip > filtered_3kb_pbhifi_merged.fastq.gz 
 ```
 
-4. Hybrid genome assebly using Hifiasm
+**4. Hybrid genome assebly using Hifiasm**
 ```
 hifiasm -l0 --hg-size 25.5m -u 0 -o pb3A.asm -t32 --ul ont_3kb_reads.fastq.gz --hom-cov auto pb3A_hifi.fastq.gz  
 
@@ -35,7 +35,7 @@ awk '/^S/{print ">"$2;print $3}' test.p_ctg.gfa > test.p_ctg.fa
 **Note:**  ```-l0```  stands to haploid/inbred genome flag
 
 
-5. Polishing of final genome assembly
+**5. Polishing of final genome assembly**
 ```
 # Quality control  using FastQC 
 
@@ -50,7 +50,7 @@ java -jar /prg/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 10 pb3A_forward
 module load bwa/0.7.13 htslib/1.8 samtools/1.13 python/3.7 hapog/1.2
 /prg/hapog/1.2/hapog.py --genome hybrid_assembly_hifiasm.fa --pe1 pb3A_forward_paired.fastq.gz --pe2 pb3A_reverse_paired.fastq.gz -o hapoG -t 10 -u
 ```
-6. Post assembly analysis
+**6. Post assembly analysis**
 
 ```
 # Checking the quality of assembly
