@@ -9,5 +9,4 @@ Bioinformatics workflow and script for the telomere to telomere genomic analysis
 
 3. [ChromoMap_R based Ideogram script](https://github.com/M-Asim-Javed/T2T_bioinformatics_workflow/blob/main/R_Ideogram.md)
 
-
    
