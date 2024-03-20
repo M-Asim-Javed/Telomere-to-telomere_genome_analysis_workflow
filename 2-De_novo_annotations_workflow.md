@@ -30,7 +30,7 @@ Paramters Note:
 
 3. ```--prot_seq=proteins.fa``` reference _Pb_ proteome file  
 
-4. ```--rnaseq_sets_ids=S001A93_ID1,S001E7A_ID2,21dpi_ID3,7dpi_ID4``` RNA seq data of 4 time points
+4. ```--rnaseq_sets_ids=S001A93_ID1,S001E7A_ID2,21dpi_ID3,7dpi_ID4``` RNA seq data of 4 time points (7, 16, 21, 26 dpi)
 
 5. ```--rnaseq_sets_dirs=./rnaseq``` 
 
