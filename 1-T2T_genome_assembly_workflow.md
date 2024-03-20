@@ -21,7 +21,7 @@ merge fastq
 # filtering ONT reads less than 3kb using "Chopper package"
 
 
-gunzip -c pbhifi_merged.fastq.gz | chopper -l 3000 | gzip > filtered_3kb_pbhifi_merged.fastq.gz  		# Kept 736592 reads out of 770078 reads
+gunzip -c pbhifi_merged.fastq.gz | chopper -l 3000 | gzip > filtered_3kb_pbhifi_merged.fastq.gz 
 ```
 
 4. Hybrid genome assebly using Hifiasm
