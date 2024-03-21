@@ -2,9 +2,11 @@
 
 Bioinformatics workflow and script for the telomere to telomere genomic analysis of clubroot pathogen *Plasmodiophora brassicae*  
 
-PacBio Hifi and Oxford Nanopore reads are being utilized for hybrid genome assembly using Hifiasm. For genome annotations, BRAKER3 pipeline that uses GeneMark-ETP + Augustus to train the model with RNASeq and protein evidence to perform the de-novo annotation, followed by TSEBRA mediated integration of both sets. [Link](https://github.com/Gaius-Augustus/BRAKER).
+PacBio Hifi and Oxford Nanopore reads are being utilized for hybrid genome assembly using Hifiasm. 
 
-singularity was used to install/execute the BRAKER3 docker container [Link](https://hub.docker.com/r/teambraker/braker3).
+For genome annotations, BRAKER3 pipeline that uses GeneMark-ETP + Augustus to train the model with RNASeq and protein evidence to perform the de-novo annotation, followed by TSEBRA mediated integration of both sets. [Link](https://github.com/Gaius-Augustus/BRAKER).
+
+Singularity was used to install/execute the BRAKER3 docker container [Link](https://hub.docker.com/r/teambraker/braker3).
 
 
 
