@@ -6,7 +6,7 @@ library(readr)
 install.packages("chromoMap", dependencies = TRUE)
 library(chromoMap)
 ```
-**2. data.frame formation**
+**2. Data.frame formation**
 ```
 chrm_file <- (read.table("chrm_ideogram_file.txt",sep = "\t"))
 anno_file <- (read.table("anno_t2t_file_2.txt",sep = "\t"))
