@@ -1,4 +1,4 @@
-# Hybrid genome assembly combining PacBio-HiFi and Oxford Nanopore reads using Hifiasm 
+# Hybrid genome assembly combining PacBio-HiFi and Oxford Nanopore reads using Hifiasm
 
 **1. Hifi data in circular consensu sequence (CCS) format recieved from sequencer**
 
