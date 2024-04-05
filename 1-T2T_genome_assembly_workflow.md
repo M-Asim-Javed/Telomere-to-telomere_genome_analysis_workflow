@@ -18,7 +18,7 @@ bam2fastq -o out in_1.bam in_2.bam in_4.bam
 
 merge fastq
 
-# filtering ONT reads less than 3kb using "Chopper package"
+# filtering ONT reads less than 3kb using "Chopper package" 
 
 
 gunzip -c pbhifi_merged.fastq.gz | chopper -l 3000 | gzip > filtered_3kb_pbhifi_merged.fastq.gz 
