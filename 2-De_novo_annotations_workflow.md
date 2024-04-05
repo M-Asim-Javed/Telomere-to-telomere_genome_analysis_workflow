@@ -1,17 +1,10 @@
 # De novo annotations of _P_. _brassicae_ genome assembly using BRAKER3 pipeline
 
 1. **Repeat content prediction and soft-masking** 
-```
-# Repeat content prediction by RepeatModeller
 
+Repeat content prediction along the genome assembly was performed using RepeatModeller on the Galaxy Europe platform [Link](https://usegalaxy.eu/)
 
-
-
-# Soft-masking of repeat region using RepeatMasker
-
-
-
-```
+The predicted repeat content was soft-masked using RepeatMasker on the Galaxy Europe platform [Link](https://usegalaxy.eu/)
 
 2. **De novo annotations using BRAKER3**
 
@@ -31,8 +24,3 @@ singularity exec braker3.sif braker.pl --genome=genome_masked.fa --species=pb
 3. ```--prot_seq=proteins.fa``` reference _Pb_ proteome file  
 
 4. ```--rnaseq_sets_ids=S001A93_ID1,S001E7A_ID2,21dpi_ID3,7dpi_ID4``` RNA seq data of 4 time points (7, 16, 21, 26 dpi)
-
-5. ```--rnaseq_sets_dirs=./rnaseq``` 
-
-
-
