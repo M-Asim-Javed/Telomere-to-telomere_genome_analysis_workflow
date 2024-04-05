@@ -32,7 +32,7 @@ hifiasm -l0 --hg-size 25.5m -u 0 -o pb3A.asm -t32 --ul ont_3kb_reads.fastq.gz --
 
 awk '/^S/{print ">"$2;print $3}' test.p_ctg.gfa > test.p_ctg.fa
 ```
-**Note:**  ```-l0```  stands to haploid/inbred genome flag
+**Note:**  ```-l0``` flag stands to haploid/inbred genome mode
 
 
 **5. Polishing of final genome assembly**
