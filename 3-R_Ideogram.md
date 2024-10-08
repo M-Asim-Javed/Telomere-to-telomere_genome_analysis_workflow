@@ -1,19 +1,22 @@
 # Chromosome Ideogram to visualize gene density and repeat regions using ChromoMap [Link](https://cran.r-project.org/web/packages/chromoMap/vignettes/chromoMap.html)
 
 **1. Installation**
-```
+
+```R
 library(readr)
 install.packages("chromoMap", dependencies = TRUE)
 library(chromoMap)
 ```
 **2. Data.frame formation**
-```
+
+```R
 chrm_file <- (read.table("chrm_ideogram_file.txt",sep = "\t"))
 anno_file <- (read.table("anno_t2t_file_2.txt",sep = "\t"))
 ```
 
 **3. Chromomap library with data input with export image**
-```
+
+```R
 chromoMap("chrm_ideogram_file.txt", "anno_t2t_file_2.txt", 
           chr_color = c("lightgreen"), 
           n_win.factor = 2,
