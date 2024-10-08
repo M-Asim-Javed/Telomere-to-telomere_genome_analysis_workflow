@@ -1,6 +1,6 @@
 # Telomere to telomere genome analysis of *Plasmodiophora brassicae*
 
-Workflow for the telomere to telomere genome analysis of clubroot pathogen *Plasmodiophora brassicae* and work published in Genome Biology anf Evolution (GBE) [https://doi.org/10.1093/gbe/evae122].
+Workflow for the telomere to telomere genome analysis of clubroot pathogen *Plasmodiophora brassicae* and work published in Genome Biology anf Evolution (GBE) https://doi.org/10.1093/gbe/evae122.
 
 Hybrid Genome Assembly: PacBio Hifi and Oxford Nanopore reads were utilized for hybrid genome assembly using Hifiasm and polished the final assembly with Illumina reads.
 
