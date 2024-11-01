@@ -14,9 +14,6 @@ bam2fastq -o out in_1.bam in_2.bam in_4.bam
 **3. Quality control of Oxford Nanopore reads**
 
 ```bash
-# merge all basecalled ONT fastq files
-
-merge all fastq files
 
 # filtering ONT reads less than 3kb using "Chopper package" 
 
