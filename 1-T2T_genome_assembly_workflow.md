@@ -60,5 +60,5 @@ quast.py pb3A_T_T_assembly.fa reference_genome.fa -o quast_assembly_report
 
 # Compleasm_genome completeness/BUSCO
 
-python /home/edelab/miniconda3/pkgs/compleasm-0.2.5-pyh7cba7a3_0/site-packages/compleasm.py run -a pb3A_T_T_assembly.fasta -o output_t2t_assembly -t 30 -l eukaryota  
+python /home/edelab/miniconda3/pkgs/compleasm-0.2.6-pyh7cba7a3_0/site-packages run -a pb3A_T_T_assembly.fasta -o output_t2t_assembly -t 30 -l eukaryota  
 ```
