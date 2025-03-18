@@ -13,7 +13,6 @@ RepeatModeler -database qc56_genome_db -pa 8 -LTRStruct > repeatmodeler.log
 RepeatMasker/4.1.2
 RepeatMasker -pa 8 -lib file_path/RM_150248.FriJan32336242025/consensi.fa.classified -gff -xsmall -dir repeatmasker_output sa01_raven_corrected_2.fa
 
-The predicted repeat content was soft-masked using RepeatMasker on the Galaxy Europe platform [Link](https://usegalaxy.eu/)
 ```
 
 2. **De novo annotations using BRAKER3**
