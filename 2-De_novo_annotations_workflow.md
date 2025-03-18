@@ -2,9 +2,19 @@
 
 1. **Repeat content prediction and soft-masking** 
 
-Repeat content prediction along the genome assembly was performed using RepeatModeller on the Galaxy Europe platform [Link](https://usegalaxy.eu/)
+Repeat content prediction along the genome assembly was performed using RepeatModeller and RepeatMasker.
+
+```bash
+module load RepeatModeler/2.0.1
+BuildDatabase -name qc56_genome_db -engine ncbi qc56_canu_hapoG_corrected.fa
+
+RepeatModeler -database qc56_genome_db -pa 8 -LTRStruct > repeatmodeler.log
+
+RepeatMasker/4.1.2
+RepeatMasker -pa 8 -lib file_path/RM_150248.FriJan32336242025/consensi.fa.classified -gff -xsmall -dir repeatmasker_output sa01_raven_corrected_2.fa
 
 The predicted repeat content was soft-masked using RepeatMasker on the Galaxy Europe platform [Link](https://usegalaxy.eu/)
+```
 
 2. **De novo annotations using BRAKER3**
 
