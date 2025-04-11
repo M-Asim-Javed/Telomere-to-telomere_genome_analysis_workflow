@@ -6,12 +6,12 @@ Repeat content prediction along the genome assembly was performed using RepeatMo
 
 ```bash
 module load RepeatModeler/2.0.1
-BuildDatabase -name qc56_genome_db -engine ncbi qc56_canu_hapoG_corrected.fa
+BuildDatabase -name sample_genome_db -engine ncbi sample_canu_hapoG_corrected.fa
 
-RepeatModeler -database qc56_genome_db -pa 8 -LTRStruct > repeatmodeler.log
+RepeatModeler -database sample_genome_db -pa 8 -LTRStruct > repeatmodeler.log
 
 RepeatMasker/4.1.2
-RepeatMasker -pa 8 -lib file_path/RM_150248.FriJan32336242025/consensi.fa.classified -gff -xsmall -dir repeatmasker_output sa01_raven_corrected_2.fa
+RepeatMasker -pa 8 -lib file_path/RM_150248.FriJan32336242025/consensi.fa.classified -gff -xsmall -dir repeatmasker_output sample_corrected_2.fa
 
 ```
 
